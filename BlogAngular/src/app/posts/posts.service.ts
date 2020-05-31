@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
-import { ConfigService } from '../config/config.service';
+import { ConfigService, Config } from '../config/config.service';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
+  promiseConfig: Promise<Config>;
 
   constructor(private configsService: ConfigService, public http: HttpClient) {
-    const config = configsService.getConfig();
-    const sub = config.subscribe((value) => {
-      console.log(value)
-    });
+    this.promiseConfig = configsService.getConfig().toPromise();
   }
 
   getPosts() {
-    const postsUrl = this.configsService.getConfig()
-      .toPromise()
-      .then((config) => {
-        return this.http.get(config.postsUrl).toPromise();
-      })
+    return this.promiseConfig.then(value => {
+      return this.http.get(value.postsUrl).toPromise();
+    });
   }
 }

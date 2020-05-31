@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConfigService } from './config/config.service';
 import { PostsComponent } from './posts/posts.component';
+import { OopsComponent } from './oops/oops.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    OopsComponent
   ],
   imports: [
     BrowserModule,
