@@ -6,20 +6,30 @@ import { AppComponent } from './app.component';
 import { ConfigService } from './config/config.service';
 import { PostsComponent } from './posts/posts.component';
 import { OopsComponent } from './oops/oops.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
+import { AddPostComponent } from './addPost/addPost.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    OopsComponent
+    OopsComponent,
+    HomeComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
-  providers: [ConfigService],
-  bootstrap: [AppComponent]
+  providers: [
+    ConfigService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 
