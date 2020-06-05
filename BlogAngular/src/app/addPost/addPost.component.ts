@@ -14,6 +14,11 @@ export class AddPostComponent implements OnInit {
 
   addPost(title, content) {
     let post = { "title": title.value, "content": content.value };
+    if (localStorage.getItem("posts")) {
+      this.posts = JSON.parse(localStorage.getItem("posts"))
+    }
+    this.posts.push(post)
+    localStorage.setItem("posts", JSON.stringify(this.posts))
     alert("Post dodano!")
   }
 }
