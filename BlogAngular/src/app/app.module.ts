@@ -7,30 +7,31 @@ import { ConfigService } from './config/config.service';
 import { PostsComponent } from './posts/posts.component';
 import { OopsComponent } from './oops/oops.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './home/home.component';
 import { AddPostComponent } from './addPost/addPost.component';
+import { LikeComponent } from './posts/post/like/like.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostComponent } from './posts/post/post.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     OopsComponent,
-    HomeComponent,
-    AddPostComponent
+    AddPostComponent,
+    LikeComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule,
   ],
-  providers: [
-    ConfigService
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  providers: [ConfigService],
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-
-}
+export class AppModule {}

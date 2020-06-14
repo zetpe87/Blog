@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form [formGroup]="postGroup" novalidate>
     <div class="form-group">
       <label for="title">Tytuł</label>
       <input type="text" name="title" class="form-control" placeholder="Dodaj tytuł" #title>
@@ -11,6 +11,6 @@
       <small id="TextHelper" class="form-text text-muted">Bo tekst musi mieć treść!</small>
     </div>
 
-    <button type="button" (click)="addPost(title, content)" class="btn btn-dark">Zapisz</button>
+    <button type="button" (click)="addPost()" class="btn btn-dark">Zapisz</button>
   </form>
 </div>

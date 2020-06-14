@@ -6,6 +6,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PostsService {
+  [x: string]: any;
+  // savePost(post: Post): Promise<void> {
+  //   throw new Error("Method not implemented.");
+  // }
   promiseConfig: Promise<Config>;
 
   constructor(private configsService: ConfigService, public http: HttpClient) {
