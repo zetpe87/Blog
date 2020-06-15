@@ -1,14 +1,18 @@
 <div class="container">
   <!-- <h3>{{post.title}}</h3>
   <p>{{post.text }}...</p> -->
+
   <div class="mat-card">
-    <mat-card-title>{{post.title}}</mat-card-title>
+    <mat-card-title>
+      {{post.title}}
+    </mat-card-title>
    
    <mat-card-content>
     <p>{{post.text }}...</p>
     </mat-card-content>
   <!-- <p class=""> {{post.likes}}</p> -->
-  <mat-card-actions>
-  <app-like [post]="post"> </app-like>
+  <mat-card-actions> 
+     <app-like [post]="post"> </app-like>
 </mat-card-actions>
+</div>
 </div>
