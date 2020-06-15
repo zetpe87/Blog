@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { PostsService } from '../posts/posts.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addPost',
@@ -11,10 +13,17 @@ export class AddPostComponent implements OnInit {
   postGroup: FormGroup;
   posts = [];
   showError: boolean = false;
+
   constructor(
     private postService: PostsService,
-    private formBuilder: FormBuilder
-  ) {}
+    private _snackBar: MatSnackBar,
+    private router: Router
+  ) {
+    this.postGroup = new FormGroup({
+      title: new FormControl('', Validators.minLength(5)),
+      text: new FormControl('', Validators.maxLength(750)),
+    });
+  }
 
   ngOnInit() {}
 
@@ -24,7 +33,13 @@ export class AddPostComponent implements OnInit {
       console.log(formValue);
       this.postService
         .savePost(formValue)
-        .then((success) => console.log(success))
+        .then((success) => {
+          console.log(success);
+          this._snackBar.open('Zapisano!', 'Super!', {
+            duration: 4000,
+          });
+          this.router.navigate(['/']);
+        })
         .catch((failure) => console.log(failure));
     } else {
       this.showError = true;

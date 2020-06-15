@@ -10,8 +10,6 @@ import { Post } from '../../post';
 export class LikeComponent implements OnInit {
   likeButtonClick() {
     this.post.like = !this.post.like;
-
-    console.log(this.post);
   }
 
   // dislikeButtonClick() {

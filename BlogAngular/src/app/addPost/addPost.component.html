@@ -1,16 +1,36 @@
-<div class="container">
+<!-- <div class="container">
   <form [formGroup]="postGroup" novalidate>
     <div class="form-group">
       <label for="title">Tytuł</label>
-      <input type="text" name="title" class="form-control" placeholder="Dodaj tytuł" #title>
+      <input formControlName="title" type="text" class="form-control" placeholder="Dodaj tytuł" #title>
 
     </div>
     <div class="form-group">
       <label for="text">Treść</label>
-      <input type="text" name="content" class="form-control addText" placeholder="Dodaj tekst" #content>
+      <input formControlName="text" type="text" name="content" class="form-control addText" placeholder="Dodaj tekst"
+        #content>
       <small id="TextHelper" class="form-text text-muted">Bo tekst musi mieć treść!</small>
     </div>
 
     <button type="button" (click)="addPost()" class="btn btn-dark">Zapisz</button>
+  </form>
+</div> -->
+
+<div class="container">
+  <form [formGroup]="postGroup" novalidate>
+    <mat-form-field class="newPostTitle" appearance="fill">
+      <mat-label>Tytuł</mat-label>
+      <input formControlName="title" matInput>
+      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+    <br>
+    <mat-form-field class="newPostText" appearance="fill">
+      <mat-label>Wypełnij treścią!</mat-label>
+      <textarea formControlName="text" matInput></textarea>
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button color="primary" (click)="addPost()">Zapisz</button>
+    <!-- <button type="button"  class="btn btn-dark">Zapisz</button> -->
   </form>
 </div>

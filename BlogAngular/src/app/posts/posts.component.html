@@ -1,8 +1,32 @@
-<p>
-  Działa?
-</p>
-<div class = "postsBody">
-<div class="row">
-<app-post *ngFor="let post of posts | async" [post]="post" class="col-s-4" ></app-post>
-</div>
-</div>
+<div class="postsBody">
+  <div class="search">
+    <mat-form-field class="searchForm" appearance="fill">
+      <mat-label>
+        <mat-icon aria-hidden="false" aria-label="">search</mat-icon> Szukasz czegoś konkretnego?
+      </mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
+  <div>
+    <div class="row">
+      <app-post *ngFor="let post of posts | async" [post]="post" class="col-s-4"></app-post>
+    </div>
+  </div>
+  <!-- <div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select matInput>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+</div> -->

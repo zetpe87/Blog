@@ -1,3 +1,15 @@
-.addText {
-  height: 10rem;
+.container {
+  padding: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.newPostTitle,
+.newPostText {
+  width: 75%;
+}
+
+
+textarea {
+  height: 200px;
 }

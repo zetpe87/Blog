@@ -1,8 +1,16 @@
-.postsBody{
-    padding: 20px;
-    margin: 30px;
-    width: auto;
-    justify-content: center;
-    align-items: flex-end;
-   
+.postsBody {
+  padding: 20px;
+  margin: 30px;
+  width: auto;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.search {
+  justify-content: center;
+  text-align: center;
+}
+
+.searchForm {
+  width: 50%;
 }

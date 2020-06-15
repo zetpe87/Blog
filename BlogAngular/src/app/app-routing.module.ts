@@ -3,16 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { OopsComponent } from './oops/oops.component';
 import { PostsComponent } from './posts/posts.component';
 import { AddPostComponent } from './addPost/addPost.component';
-
+import { PostComponent } from './posts/post/post.component';
+import { PostDetailsComponent } from './posts/postDetails/postDetails.component';
 
 const routes: Routes = [
   { path: '', component: PostsComponent },
   { path: 'AddPost', component: AddPostComponent },
-  { path: '**', component: OopsComponent } //trafienie na niezdefiniowaną ścieżkę
+  { path: 'posts/:id', component: PostDetailsComponent },
+  { path: '**', component: OopsComponent }, //trafienie na niezdefiniowaną ścieżkę
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

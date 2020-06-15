@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { ConfigService, Config } from '../config/config.service';
 import { HttpClient } from '@angular/common/http';
+import { Post } from './post';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostsService {
   [x: string]: any;
@@ -17,8 +18,24 @@ export class PostsService {
   }
 
   getPosts() {
-    return this.promiseConfig.then(value => {
+    return this.promiseConfig.then((value) => {
       return this.http.get(value.postsUrl).toPromise();
+    });
+  }
+
+  savePost(post: Post) {
+    return this.promiseConfig.then((value) => {
+      return this.http.post(value.postsUrl, post).toPromise();
+    });
+  }
+
+  fetchPost(postId) {
+    return this.promiseConfig.then((value) => {
+      return this.http
+        .get(`${value.postsUrl}/${postId}`)
+        .toPromise()
+        .then()
+        .catch();
     });
   }
 }

@@ -3,16 +3,18 @@
   <p>{{post.text }}...</p> -->
 
   <div class="mat-card">
-    <mat-card-title>
+
+    <mat-card-title routerLink="/posts/{{post.id}}">
       {{post.title}}
+
     </mat-card-title>
-   
-   <mat-card-content>
-    <p>{{post.text }}...</p>
+
+    <mat-card-content>
+      <p>{{post.text }}...</p>
     </mat-card-content>
-  <!-- <p class=""> {{post.likes}}</p> -->
-  <mat-card-actions> 
-     <app-like [post]="post"> </app-like>
-</mat-card-actions>
-</div>
+    <!-- <p class=""> {{post.likes}}</p> -->
+    <mat-card-actions>
+      <app-like [post]="post"> </app-like>
+    </mat-card-actions>
+  </div>
 </div>

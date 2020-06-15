@@ -1,0 +1,14 @@
+.DetailCard {
+  padding: 20px;
+  text-align: center;
+  margin: 15px;
+
+}
+
+.mat-card-title p {
+  padding: 15px;
+}
+
+.mat-card-content p {
+  padding: 15px;
+}

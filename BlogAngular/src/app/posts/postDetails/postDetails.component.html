@@ -1,0 +1,28 @@
+<div class="container postDetailBody">
+
+  <div class="mat-card">
+    <mat-card-title class="DetailCard">
+      <p>{{post.title}}</p>
+    </mat-card-title>
+
+    <mat-card-content class="DetailCard">
+      <p>{{post.text}}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <div class="row">
+        <div class="col-6">
+          <app-like [post]="post"> </app-like>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <span class="material-icons rightIcon">
+              delete
+            </span>
+          </div>
+        </div>
+      </div>
+    </mat-card-actions>
+
+  </div>
+</div>
