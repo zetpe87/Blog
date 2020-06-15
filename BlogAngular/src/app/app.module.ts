@@ -12,6 +12,9 @@ import { LikeComponent } from './posts/post/like/like.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostComponent } from './posts/post/post.component';
 import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatCardModule,
+    MatButtonModule
+  
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent],

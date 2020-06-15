@@ -1,8 +1,13 @@
 <div>
 
-  <button (click)="likeButtonClick()">
+  <button mat-icon-button (click)="likeButtonClick()">
+    <!-- <mat-icon *ngIf="!post.like" aria-hidden="false" aria-label="">favorite_border</mat-icon>
+    <mat-icon *ngIf="post.like" aria-hidden="false" aria-label="">favorite</mat-icon> -->
     <mat-icon *ngIf="!post.like" aria-hidden="false" aria-label="">favorite_border</mat-icon>
-    <mat-icon *ngIf="post.like" aria-hidden="false" aria-label="">favorite</mat-icon>
+    <mat-icon *ngIf="post.like"  aria-hidden="false" aria-label=""> favorite</mat-icon> 
+
+    
+     
   </button>
   <!-- <button (click)="dislikeButtonClick()">Dislike!</button> -->
 </div>
