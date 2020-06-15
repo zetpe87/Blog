@@ -1,13 +1,21 @@
 {
-  "posts": [{
+  "posts": [
+    {
       "id": 1,
       "title": "Post numer 1",
-      "text": "Lorem ipsum..."
+      "text": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. ",
+      "like": false
     },
     {
       "id": 2,
       "title": "Post numer 2",
-      "text": "Lorem ipsum..."
+      "text": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. ",
+      "like": false
+    },
+    {
+      "title": "Trzeci na podium",
+      "text": "Najwięcej razy w historii Formuły 1 stawał na podium Michael Schumacher – w 155 wyścigach. Drugi jest Lewis Hamilton (143 razy na podium), a trzeci Sebastian Vettel (111 razy na podium). Rekordzistą, jeśli chodzi o najdłuższy okres pomiędzy pierwszym a ostatnim pobytem na podium jest Michael Schumacher. Pomiędzy pierwszym jego podium, w Grand Prix Meksyku 1992, a ostatnim, w Grand Prix Europy 2012, minęło 20 lat, 3 miesiące i 2 dni. Najmłodszym zdobywcą podium, a zarazem zwycięzcą jest Sebastian Vettel, kiedy to wygrywając Grand Prix Włoch 2008 miał 21 lat i 73 dni. Najstarszym zaś zdobywcą podium i najstarszym zwycięzcą jest Luigi Fagioli, ponieważ wygrał Grand Prix Francji 1951, mając 53 lata i 22 dni.",
+      "id": 3
     }
   ]
 }
