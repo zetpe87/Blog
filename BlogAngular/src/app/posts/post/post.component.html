@@ -3,8 +3,8 @@
   <p>{{post.text }}...</p> -->
 
   <div class="mat-card">
-
-    <mat-card-title routerLink="/posts/{{post.id}}">
+    <mat-card-title>
+      <!-- <mat-card-title routerLink="/posts/{{post.id}}"> -->
       {{post.title}}
 
     </mat-card-title>
@@ -14,7 +14,15 @@
     </mat-card-content>
     <!-- <p class=""> {{post.likes}}</p> -->
     <mat-card-actions>
-      <app-like [post]="post"> </app-like>
+      <div class="row">
+        <div class="col-6">
+          <app-like [post]="post"> </app-like>
+        </div>
+        <div class="col-6 fullTextButton">
+          <button mat-raised-button color="primary" routerLink="/posts/{{post.id}}">Czytaj całość</button>
+        </div>
+      </div>
     </mat-card-actions>
+
   </div>
 </div>

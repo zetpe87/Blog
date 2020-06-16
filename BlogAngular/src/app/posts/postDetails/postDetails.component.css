@@ -1,6 +1,6 @@
 .DetailCard {
   padding: 20px;
-  text-align: center;
+  text-align: left;
   margin: 15px;
 
 }
@@ -11,4 +11,15 @@
 
 .mat-card-content p {
   padding: 15px;
+}
+
+.deleteButton {
+  text-align: right;
+
+}
+
+
+
+.rightIcon {
+  margin: 10px;
 }

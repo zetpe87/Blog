@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AddPostComponent implements OnInit {
   postGroup: FormGroup;
-  posts = [];
+  // posts = [];
   showError: boolean = false;
 
   constructor(
@@ -22,6 +22,7 @@ export class AddPostComponent implements OnInit {
     this.postGroup = new FormGroup({
       title: new FormControl('', Validators.minLength(5)),
       text: new FormControl('', Validators.maxLength(750)),
+      like: new FormControl(false),
     });
   }
 

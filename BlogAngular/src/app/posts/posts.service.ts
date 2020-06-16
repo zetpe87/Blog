@@ -8,6 +8,7 @@ import { Post } from './post';
 })
 export class PostsService {
   [x: string]: any;
+
   // savePost(post: Post): Promise<void> {
   //   throw new Error("Method not implemented.");
   // }
@@ -33,6 +34,16 @@ export class PostsService {
     return this.promiseConfig.then((value) => {
       return this.http
         .get(`${value.postsUrl}/${postId}`)
+        .toPromise()
+        .then()
+        .catch();
+    });
+  }
+
+  deletePost(postId: number) {
+    return this.promiseConfig.then((value) => {
+      return this.http
+        .delete(`${value.postsUrl}/${postId}`)
         .toPromise()
         .then()
         .catch();

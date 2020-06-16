@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostsService } from '../posts.service';
 import { Post } from '../post';
+import { MatDialog } from '@angular/material/dialog';
+import { DeletePostDialogComponent } from './deletePostDialog/deletePostDialog.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-postDetails',
@@ -17,7 +20,10 @@ export class PostDetailsComponent implements OnInit {
 
   constructor(
     private activateRoute: ActivatedRoute,
-    private postService: PostsService
+    private postService: PostsService,
+    private _matDialog: MatDialog,
+    private _snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -34,5 +40,20 @@ export class PostDetailsComponent implements OnInit {
       .catch((error) => {
         console.log(error);
       });
+  }
+
+  deleteButtonClick() {
+    const dialogRef = this._matDialog.open(DeletePostDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+      if (result) {
+        this.postService.deletePost(this.post.id);
+        this._snackBar.open('Usunięto!', 'OK!', {
+          duration: 4000,
+        });
+        this.router.navigate(['/']);
+      }
+    });
   }
 }

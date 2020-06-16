@@ -1,9 +1,17 @@
 .container {
- padding: 5px;
+  padding: 5px;
+  justify-content: center;
 }
 
 .mat-card {
-    padding: 10px;
-    height: auto;
-    width: 500px;
+
+
+  padding: 10px;
+  height: auto;
+  width: auto;
+}
+
+.fullTextButton {
+  text-align: right;
+  ;
 }
