@@ -4,8 +4,9 @@
       <mat-label>
         <mat-icon aria-hidden="false" aria-label="">search</mat-icon> Szukasz czegoś konkretnego?
       </mat-label>
-      <input matInput>
+      <input matInput #queryInput>
     </mat-form-field>
+    <button mat-stroked-button color="primary" (click)="search(queryInput.value)">Search</button>
   </section>
   <section class="row">
     <app-post *ngFor="let post of posts | async" [post]="post" class="col-m-3"></app-post>

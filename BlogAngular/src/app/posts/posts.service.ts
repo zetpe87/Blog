@@ -49,4 +49,10 @@ export class PostsService {
         .catch();
     });
   }
+
+  fetchPosts(query: string) {
+    return this.promiseConfig.then((value) => {
+      return this.http.get(`${value.postsUrl}?q=${query}`).toPromise(); //pobierz to, co masz pod tym url
+    });
+  }
 }

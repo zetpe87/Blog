@@ -1,32 +1,15 @@
-<!-- <div class="container">
-  <form [formGroup]="postGroup" novalidate>
-    <div class="form-group">
-      <label for="title">Tytuł</label>
-      <input formControlName="title" type="text" class="form-control" placeholder="Dodaj tytuł" #title>
-
-    </div>
-    <div class="form-group">
-      <label for="text">Treść</label>
-      <input formControlName="text" type="text" name="content" class="form-control addText" placeholder="Dodaj tekst"
-        #content>
-      <small id="TextHelper" class="form-text text-muted">Bo tekst musi mieć treść!</small>
-    </div>
-
-    <button type="button" (click)="addPost()" class="btn btn-dark">Zapisz</button>
-  </form>
-</div> -->
-
 <div class="container">
   <form [formGroup]="postGroup" novalidate>
     <mat-form-field class="newPostTitle" appearance="fill">
       <mat-label>Tytuł</mat-label>
-      <input formControlName="title" matInput>
-      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+      <input matInput [formControl]="postGroup.controls.title">
+      <mat-error *ngIf="postGroup.controls.title.invalid">{{titleErrorMessage()}}</mat-error>
     </mat-form-field>
     <br>
     <mat-form-field class="newPostText" appearance="fill">
       <mat-label>Wypełnij treścią!</mat-label>
       <textarea formControlName="text" matInput></textarea>
+      <mat-error *ngIf="postGroup.controls.title.invalid">{{textErrorMessage()}}</mat-error>
     </mat-form-field>
     <br>
 

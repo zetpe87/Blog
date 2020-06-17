@@ -15,4 +15,13 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this.posts = this.postService.getPosts();
   }
+  search(query) {
+    //1. aktualizujemy wartość "query" (wyszukiwana fraza)
+    this.query = query;
+    this.updateList();
+  }
+
+  updateList() {
+    this.posts = this.postService.fetchPosts(this.query);
+  }
 }

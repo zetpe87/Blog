@@ -20,8 +20,14 @@ export class AddPostComponent implements OnInit {
     private router: Router
   ) {
     this.postGroup = new FormGroup({
-      title: new FormControl('', Validators.minLength(5)),
-      text: new FormControl('', Validators.maxLength(750)),
+      title: new FormControl('', [
+        Validators.minLength(5),
+        Validators.required,
+      ]),
+      text: new FormControl('', [
+        Validators.maxLength(750),
+        Validators.required,
+      ]),
       like: new FormControl(false),
     });
   }
@@ -44,17 +50,27 @@ export class AddPostComponent implements OnInit {
         .catch((failure) => console.log(failure));
     } else {
       this.showError = true;
-      console.log('Formularz zawiera błędy.');
+      this._snackBar.open('Formularz zawiera błędy.', 'OK', {
+        duration: 4000,
+      });
     }
+  }
 
-    // let post = { "title": title.value, "content": content.value };
-    // if (localStorage.getItem("posts")) {
-    //   this.posts = JSON.parse(localStorage.getItem("posts"))
-    // }
-    // this.posts.push(post)
-    // localStorage.setItem("posts", JSON.stringify(this.posts))
-    // title.value = "";
-    // content.value = "";
-    // alert("Post dodano!")
+  titleErrorMessage() {
+    if (this.postGroup.controls.title.hasError('required')) {
+      return 'Zapomniano o tytule!';
+    }
+    return this.postGroup.controls.title.hasError('minlength')
+      ? 'Tytuł jest za krótki!'
+      : '';
+  }
+
+  textErrorMessage() {
+    if (this.postGroup.controls.text.hasError('required')) {
+      return 'Bez tekstu to nie ma sensu! Uzupełnij!';
+    }
+    return this.postGroup.controls.text.hasError('maxlength')
+      ? 'Za dużo tekstu!'
+      : '';
   }
 }
