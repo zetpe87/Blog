@@ -1,28 +1,21 @@
 <div class="container">
-  <!-- <h3>{{post.title}}</h3>
-  <p>{{post.text }}...</p> -->
-
-  <div class="mat-card">
+  <mat-card>
     <mat-card-title>
-      <!-- <mat-card-title routerLink="/posts/{{post.id}}"> -->
       {{post.title}}
-
     </mat-card-title>
-
     <mat-card-content>
-      <p>{{post.text }}...</p>
+      <p>{{post.text.slice(0,150)}}...</p>
     </mat-card-content>
     <!-- <p class=""> {{post.likes}}</p> -->
     <mat-card-actions>
-      <div class="row">
-        <div class="col-6">
+      <div class="matCardButtons">
+        <div class="">
           <app-like [post]="post"> </app-like>
         </div>
-        <div class="col-6 fullTextButton">
+        <div class="fullTextButton">
           <button mat-raised-button color="primary" routerLink="/posts/{{post.id}}">Czytaj całość</button>
         </div>
       </div>
     </mat-card-actions>
-
-  </div>
+  </mat-card>
 </div>

@@ -1,5 +1,11 @@
 .DetailCard {
-  padding: 20px;
+  background-color: #FAFAFA;
+}
+
+
+
+.DetailCardText {
+
   text-align: left;
   margin: 15px;
 
@@ -7,19 +13,24 @@
 
 .mat-card-title p {
   padding: 15px;
+  margin-top: 5px;
+  color: #673AB7;
 }
 
 .mat-card-content p {
-  padding: 15px;
-}
-
-.deleteButton {
-  text-align: right;
+  padding: 20px;
+  font-size: large;
+  line-height: 1.7em;
 
 }
 
 
+.matCardButtons {
+  display: flex;
+  justify-content: space-between;
+}
 
-.rightIcon {
-  margin: 10px;
+.backButton {
+  margin-top: 15px;
+  float: right;
 }

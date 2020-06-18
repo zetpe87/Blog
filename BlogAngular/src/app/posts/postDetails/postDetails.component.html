@@ -1,22 +1,22 @@
 <div class="container postDetailBody">
 
-  <div class="mat-card">
-    <mat-card-title class="DetailCard">
+  <div class="mat-card DetailCard">
+    <mat-card-title class="DetailCardTitle">
 
       <p>{{post.title}}</p>
 
     </mat-card-title>
 
-    <mat-card-content class="DetailCard">
+    <mat-card-content class="DetailCardText">
       <p>{{post.text}}</p>
     </mat-card-content>
 
     <mat-card-actions>
-      <div class="row">
-        <div class="col ">
+      <div class="matCardButtons">
+        <div class="LikeButton">
           <app-like class="likeIcon" [post]="post"> </app-like>
         </div>
-        <div class="col deleteButton">
+        <div class="deleteButton">
 
           <button mat-icon-button (click)="deleteButtonClick()">
             <mat-icon class="rightIcon" aria-hidden="false" aria-label="">delete
@@ -29,7 +29,7 @@
     </mat-card-actions>
 
   </div>
-  <div>
+  <div class="backButton">
     <button mat-raised-button color="primary" routerLink="">Powrót na stronę główną</button>
   </div>
 </div>

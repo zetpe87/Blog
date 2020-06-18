@@ -6,12 +6,13 @@
       </mat-label>
       <input matInput #queryInput>
     </mat-form-field>
-    <button mat-stroked-button color="primary" (click)="search(queryInput.value)">Search</button>
+    <button mat-stroked-button color="primary" class="searchButton" (click)="search(queryInput.value)">Search</button>
   </section>
-  <section class="row">
-    <app-post *ngFor="let post of posts | async" [post]="post" class="col-m-3"></app-post>
+  <section class="allPosts">
+    <app-post *ngFor="let post of posts | async" [post]="post"></app-post>
   </section>
-  <!-- <div class="example-container">
+</div>
+<!-- <div class="example-container">
   <mat-form-field appearance="fill">
     <mat-label>Input</mat-label>
     <input matInput>
