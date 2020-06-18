@@ -10,12 +10,16 @@ This blog project based on Angular 9 was created for the purposes of summarizing
 Project is created with:
 * Angular 9
 * Angular Materials
-* HTML 5
+* HTML5
 * CSS3
-* Bootstrap 4
+* Bootstrap4
 	
 ## Setup
-To run this project, install it locally using npm:
+You must have npm and nodejs installed to run this project.
+Clone this repo to your desktop and install it locally using npm:
 $ cd ../BlogAngular
 $ npm install
 $ npm start
+
+
+
