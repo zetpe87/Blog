@@ -24,7 +24,7 @@ import { PostDetailsComponent } from './posts/postDetails/postDetails.component'
 import { DeletePostDialogComponent } from './posts/postDetails/deletePostDialog/deletePostDialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatGridListModule, MatGridTile } from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -56,7 +56,6 @@ import { MatGridListModule, MatGridTile } from '@angular/material/grid-list';
     MatDialogModule,
     FlexLayoutModule,
     MatGridListModule,
-    MatGridTile,
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent],
