@@ -15,7 +15,7 @@ Project is created with:
 * Bootstrap4
 	
 ## Setup
-You must have npm and nodejs installed to run this project.
+Prerequisites: NPM, NodeJS.
 Clone this repo to your desktop and install it locally using npm:
 $ cd ../BlogAngular
 $ npm install
