@@ -12,8 +12,9 @@
       <mat-error *ngIf="postGroup.controls.title.invalid">{{textErrorMessage()}}</mat-error>
     </mat-form-field>
     <br>
-
-    <button mat-raised-button color="primary" (click)="addPost()">Zapisz</button>
-    <!-- <button type="button"  class="btn btn-dark">Zapisz</button> -->
+    <div class="addPostButtons">
+      <button mat-raised-button color="primary" (click)="addPost()">Zapisz</button>
+      <button mat-raised-button color="warn" routerLink="">Anuluj</button>
+    </div>
   </form>
 </div>

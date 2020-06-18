@@ -1,13 +1,16 @@
-<mat-grid-list cols="2" rowHeight="3:1">
-  <mat-grid-tile><img src=" ../../assets/oopsPen.png" alt="404">
-  </mat-grid-tile>
-  <mat-grid-tile>
+<div class="oops">
+  <div>
     <h1>Ups!</h1>
-  </mat-grid-tile>
+    <p>
+      Coś poszło nie tak.
+    </p>
+  </div>
+  <div>
+    <img class="oopsImage" src="../../assets/oopsPen.png" alt="404">
+  </div>
 
-</mat-grid-list>
 
-<!-- <div class="grid">
+  <!-- <div class="grid">
   <div class="oopsImage">
     <img src="../../assets/oopsPen.png" alt="404">
   </div>
@@ -20,6 +23,7 @@
   </div>
 </div> -->
 
-<div class="oopsButton">
-  <button type="button" class="btn btn-outline-secondary" routerLink="">Wróć na stronę główną</button>
+  <div class="oopsButton">
+    <button mat-stroked-button color="primary" routerLink="">Wróć na stronę główną</button>
+  </div>
 </div>
