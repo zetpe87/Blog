@@ -27,15 +27,16 @@ npm install -g json-server and next
 ```
 json-server --watch db.json
 ```
-Now Run ng serve for a dev server. 
-Navigate to http://localhost:4200/. 
-The app will automatically reload if you change any of the source files:
+Your next step should start the development server:
 
 ```
 $ cd ../BlogAngular
 $ npm install
 $ npm start
 ```
+Navigate to http://localhost:4200/. 
+The app will automatically reload with every change of the source code.
+
 	
 
 	
