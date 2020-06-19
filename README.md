@@ -23,11 +23,15 @@ You can start API by JSON Server:
 ```
 npm install -g json-server and next
 ```
+
 * start JSON Server 
+terminal and navigate to root of repository
+
 ```
-json-server --watch db.json
+json-server --watch database.json
 ```
-Your next step should start the development server:
+
+* your next step should start the development server:
 
 ```
 $ cd ../BlogAngular
@@ -37,6 +41,7 @@ $ npm start
 Navigate to http://localhost:4200/. 
 The app will automatically reload with every change of the source code.
 
+Enjoy (more than me)! :)
 	
 
 	
