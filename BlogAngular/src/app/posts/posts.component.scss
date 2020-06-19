@@ -1,20 +1,16 @@
 .postsBody {
   width: auto;
-  // justify-content: center;
-  // align-items: flex-end;
 }
 
-.search {
+
+.search,
+h1 {
   justify-content: center;
   text-align: center;
 }
 
 .searchForm {
   width: 60%;
-}
-
-.allPosts {
-  // width: 50%;
 }
 
 .searchButton {

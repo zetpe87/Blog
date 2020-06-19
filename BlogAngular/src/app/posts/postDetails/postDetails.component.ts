@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-postDetails',
   templateUrl: './postDetails.component.html',
-  styleUrls: ['./postDetails.component.css'],
+  styleUrls: ['./postDetails.component.scss'],
 })
 export class PostDetailsComponent implements OnInit {
   post: Post = {

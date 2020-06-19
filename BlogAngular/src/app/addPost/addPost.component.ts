@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-addPost',
   templateUrl: './addPost.component.html',
-  styleUrls: ['./addPost.component.css'],
+  styleUrls: ['./addPost.component.scss'],
 })
 export class AddPostComponent implements OnInit {
   postGroup: FormGroup;

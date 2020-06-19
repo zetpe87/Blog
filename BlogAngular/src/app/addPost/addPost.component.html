@@ -3,12 +3,15 @@
     <mat-form-field class="newPostTitle" appearance="fill">
       <mat-label>Tytuł</mat-label>
       <input matInput [formControl]="postGroup.controls.title">
+
       <mat-error *ngIf="postGroup.controls.title.invalid">{{titleErrorMessage()}}</mat-error>
     </mat-form-field>
     <br>
     <mat-form-field class="newPostText" appearance="fill">
       <mat-label>Wypełnij treścią!</mat-label>
-      <textarea formControlName="text" matInput></textarea>
+      <!-- Wyświetlanie zarówno ilości dostępnych znaków, jak i ich przekroczenia -->
+      <textarea formControlName="text" matInput #message></textarea>
+      <mat-hint align="start">{{message.value.length}} / 750</mat-hint>
       <mat-error *ngIf="postGroup.controls.title.invalid">{{textErrorMessage()}}</mat-error>
     </mat-form-field>
     <br>

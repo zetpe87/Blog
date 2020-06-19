@@ -55,4 +55,14 @@ export class PostsService {
       return this.http.get(`${value.postsUrl}?q=${query}`).toPromise(); //pobierz to, co masz pod tym url
     });
   }
+
+  //Zapisujemy zmiany (w obecnym stanie - "like") na stałe na serwerze
+  updatePost(post: Post) {
+    console.log(post);
+    return this.promiseConfig.then((value) => {
+      return this.http
+        .put<Post>(`${value.postsUrl}/${post.id}`, post)
+        .toPromise();
+    });
+  }
 }

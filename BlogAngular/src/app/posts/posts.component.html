@@ -1,22 +1,18 @@
 <div class="postsBody">
-  <!-- <section>
-    <h2>Co dzisiaj przeczytasz?</h2>
-  </section> -->
+
   <section class="search">
     <mat-form-field class="searchForm" appearance="fill">
       <mat-label>
         Szukasz czegoś konkretnego?
       </mat-label>
       <!--Zależało mi, aby były dwie możliwości uruchomienia szukania: zarówno poprzez button, jak i przez "Enter"-->
-
-
       <input matInput (keydown.enter)="search(queryInput.value)" [(ngModel)]="value" #queryInput>
-      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="clear()">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
     <button mat-stroked-button color="primary" class="searchButton" (click)="search(queryInput.value)">
-      <mat-icon aria-hidden="false" aria-label="">search</mat-icon>
+      <mat-icon class="searchIcon" aria-hidden="false" aria-label="">search</mat-icon>
     </button>
   </section>
   <section class="allPosts">

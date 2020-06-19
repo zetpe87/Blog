@@ -25,4 +25,11 @@ export class PostsComponent implements OnInit {
   updateList() {
     this.posts = this.postService.fetchPosts(this.query);
   }
+
+  //Czyszczenie pola wyszukiwania i powrót do całej listy postów
+  clear() {
+    this.value = '';
+    this.query = '';
+    this.updateList();
+  }
 }
