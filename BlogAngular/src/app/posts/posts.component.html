@@ -7,7 +7,13 @@
       <mat-label>
         Szukasz czegoś konkretnego?
       </mat-label>
-      <input matInput #queryInput>
+      <!--Zależało mi, aby były dwie możliwości uruchomienia szukania: zarówno poprzez button, jak i przez "Enter"-->
+
+
+      <input matInput (keydown.enter)="search(queryInput.value)" [(ngModel)]="value" #queryInput>
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
     </mat-form-field>
     <button mat-stroked-button color="primary" class="searchButton" (click)="search(queryInput.value)">
       <mat-icon aria-hidden="false" aria-label="">search</mat-icon>

@@ -14,6 +14,8 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+//występował konflikt na poziomie buttonów, związany z anular materials i bootstrapem - pojawiał się outline podczas
+//klikania na button. Poniższe rozwiazanie niweluje ten problem
 button:focus,
 button:active:focus,
 button.active:focus {

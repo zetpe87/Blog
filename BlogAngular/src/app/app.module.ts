@@ -25,6 +25,7 @@ import { DeletePostDialogComponent } from './posts/postDetails/deletePostDialog/
 import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { appFooterComponent } from './appFooter/appFooter.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     PostComponent,
     PostDetailsComponent,
     DeletePostDialogComponent,
+    appFooterComponent,
   ],
   imports: [
     BrowserModule,

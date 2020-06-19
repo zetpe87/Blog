@@ -9,6 +9,7 @@ import { PostsService } from './posts.service';
 export class PostsComponent implements OnInit {
   posts: Promise<Object>;
   query: string = '';
+  value = '';
 
   constructor(private postService: PostsService) {}
 
