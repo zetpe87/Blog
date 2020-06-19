@@ -1,11 +1,12 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Development server](#development-server)
 
 ## General info
 This blog project based on Angular 9 was created for the purposes of summarizing postgraduate studies at the WSB in Chorzów.
-	
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+
 ## Technologies
 Project is created with:
 * Angular 9
@@ -13,13 +14,35 @@ Project is created with:
 * HTML5
 * CSS3
 * Bootstrap4
-	
-## Setup
+
+## Development server
 Prerequisites: NPM, NodeJS.
-Clone this repo to your desktop and install it locally using npm:
+
+You can start API by JSON Server:
+* installation: 
+```
+npm install -g json-server and next
+```
+
+* start JSON Server 
+terminal and navigate to root of repository
+
+```
+json-server --watch database.json
+```
+
+* your next step should start the development server:
+
+```
 $ cd ../BlogAngular
 $ npm install
 $ npm start
+```
+Navigate to http://localhost:4200/. 
+The app will automatically reload with every change of the source code.
 
+Enjoy (more than me)! :)
+	
 
+	
 
