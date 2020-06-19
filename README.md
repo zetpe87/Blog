@@ -19,7 +19,7 @@ Project is created with:
 Prerequisites: NPM, NodeJS.
 
 You can start API by JSON Server:
-* install it: 
+* installation: 
 ```
 npm install -g json-server and next
 ```
