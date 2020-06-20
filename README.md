@@ -34,7 +34,7 @@ json-server --watch database.json
 * your next step should start the development server:
 
 ```
-$ cd ../BlogAngular
+$ cd ./BlogAngular
 $ npm install
 $ npm start
 ```
